@@ -1,9 +1,5 @@
-# Functions go here
-from re import error
-
-
-#Check that users have entered a valid option based on a list
-def string_checker(question, valid_ans=["yes", "no"]):
+# Check that users have entered a valid option based on a list
+def string_checker(question, valid_ans=("yes", "no")):
 
     error = f"Please enter a valid option from the following list: {valid_ans}"
 
@@ -35,5 +31,7 @@ want_instructions = string_checker("Do you want to see the instructions? ")
 
 print("You chose: ", want_instructions)
 
+user_choice = string_checker("Choose: ", rps_list)
+print("You chose: ", user_choice)
 
 
